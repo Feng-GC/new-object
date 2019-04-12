@@ -2,7 +2,6 @@
 
 > 从零开始的学习项目
 # 插件
-``` bash
 # 使用的轮播插件：vue-awesome-swiper
 
 ## Build Setup
