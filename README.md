@@ -1,6 +1,7 @@
 # new-object
 
 > 从零开始的学习项目
+#
 > 使用的轮播插件：vue-awesome-swiper
 
 ## Build Setup
