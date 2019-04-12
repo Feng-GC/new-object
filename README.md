@@ -1,6 +1,6 @@
 # new-object
 
-> A Vue.js project
+> 从零开始的学习项目
 
 ## Build Setup
 
