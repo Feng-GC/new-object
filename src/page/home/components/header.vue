@@ -5,10 +5,10 @@
     </div>
     <div class="header-input">
       <span class="iconfont inputicon">&#xe632;</span>
-      main
+      测试后续会跳转搜索页
     </div>
     <div class="header-right">
-      rihgt
+      default
       <span class="iconfont downicon">&#xe62d;</span>
     </div>
   </div>
