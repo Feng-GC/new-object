@@ -33,7 +33,11 @@
 <script>
 export default {
   name: "HomeRecommend",
+  props:{
+    recommendList:Array
+  },
   data() {
+    
     return {
       listArr: [
         {

@@ -4,9 +4,9 @@
       <swiper-slide v-for="(page,index) of swiperList" :key="index">
         <div class="icon" v-for="item of page" :key="item.id">
           <div class="icon-img">
-            <img class="icon-img-l" :src="item.url">
+            <img class="icon-img-l" :src="item.imgUrl">
           </div>
-          <p class="icon-desc">{{item.des}}</p>
+          <p class="icon-desc">{{item.desc}}</p>
         </div>
       </swiper-slide>
     </swiper>
@@ -16,85 +16,90 @@
 <script>
 export default {
   name: "HomeIcons",
+  props:{
+    iconsList:Array
+  },
   data() {
     return {
-      imgList: [
-        {
-          id: "001",
-          url:
-            "http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png",
-          des: "热门景点"
-        },
-        {
-          id: "002",
-          url:
-            "http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png",
-          des: "热门景点"
-        },
-        {
-          id: "003",
-          url:
-            "http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png",
-          des: "热门景点"
-        },
-        {
-          id: "004",
-          url:
-            "http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png",
-          des: "热门景点"
-        },
-        {
-          id: "005",
-          url:
-            "http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png",
-          des: "热门景点"
-        },
-        {
-          id: "006",
-          url:
-            "http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png",
-          des: "热门景点"
-        },
-        {
-          id: "007",
-          url:
-            "http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png",
-          des: "热门景点"
-        },
-        {
-          id: "008",
-          url:
-            "http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png",
-          des: "热门景点"
-        },
-        {
-          id: "009",
-          url:
-            "http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png",
-          des: "热门景点"
-        },
-        {
-          id: "0010",
-          url:
-            "http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png",
-          des: "热门景点"
-        },
-        {
-          id: "011",
-          url:
-            "http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png",
-          des: "热门景点"
-        }
-      ],
+      // imgList: [
+      //   {
+      //     id: "001",
+      //     url:
+      //       "http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png",
+      //     des: "热门景点"
+      //   },
+      //   {
+      //     id: "002",
+      //     url:
+      //       "http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png",
+      //     des: "热门景点"
+      //   },
+      //   {
+      //     id: "003",
+      //     url:
+      //       "http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png",
+      //     des: "热门景点"
+      //   },
+      //   {
+      //     id: "004",
+      //     url:
+      //       "http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png",
+      //     des: "热门景点"
+      //   },
+      //   {
+      //     id: "005",
+      //     url:
+      //       "http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png",
+      //     des: "热门景点"
+      //   },
+      //   {
+      //     id: "006",
+      //     url:
+      //       "http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png",
+      //     des: "热门景点"
+      //   },
+      //   {
+      //     id: "007",
+      //     url:
+      //       "http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png",
+      //     des: "热门景点"
+      //   },
+      //   {
+      //     id: "008",
+      //     url:
+      //       "http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png",
+      //     des: "热门景点"
+      //   },
+      //   {
+      //     id: "009",
+      //     url:
+      //       "http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png",
+      //     des: "热门景点"
+      //   },
+      //   {
+      //     id: "0010",
+      //     url:
+      //       "http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png",
+      //     des: "热门景点"
+      //   },
+      //   {
+      //     id: "011",
+      //     url:
+      //       "http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png",
+      //     des: "热门景点"
+      //   }
+      // ],
       swiperOption:{
-        autoplay:false
+        autoplay:false,
+        
       }
     };
   },
   computed: {
     swiperList: function() {
       var listArr = [];
-      this.imgList.forEach((item, index) => {
+      console.log(this.iconsList)
+      this.iconsList.forEach((item, index) => {
         var page = Math.floor(index / 10);
         if(!listArr[page]){
           listArr[page] = []
