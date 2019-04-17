@@ -7,10 +7,12 @@
       <span class="iconfont inputicon">&#xe632;</span>
       测试后续会跳转搜索页
     </div>
-    <div class="header-right">
-      default
-      <span class="iconfont downicon">&#xe62d;</span>
-    </div>
+    <router-link to="/city">
+      <div class="header-right">
+        default
+        <span class="iconfont downicon">&#xe62d;</span>
+      </div>
+    </router-link>  
   </div>
 </template>
 
