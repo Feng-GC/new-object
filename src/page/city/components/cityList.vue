@@ -1,67 +1,82 @@
-<div class="item-city">
-        <div class="city">北京</div>
-      </div><template>
-  <div class="list">
-     <!-- 当前城市 -->
-    <div class="item border">
-      <div class="item-title">当前城市</div>
-      <div class="item-city">
-        <div class="city">北京</div>
+<template>
+  <div class="list" ref="wrapper">
+    <!-- 这个无类名DIV结合于better-scroll的文件结构 -->
+      <div>
+          <!-- 当前城市 -->
+        <div class="item border">
+          <div class="item-title">当前城市</div>
+          <div class="item-city">
+            <div class="city">北京</div>
+          </div>
+        </div>
+        <!-- 热门城市 -->
+        <div class="item border">
+          <div class="item-title">热门城市</div>
+          <div class="item-city">
+            <div class="city">北京</div>
+          </div>
+          <div class="item-city">
+            <div class="city">北京</div>
+          </div>
+          <div class="item-city">
+            <div class="city">北京</div>
+          </div>
+          <div class="item-city">
+            <div class="city">北京</div>
+          </div>
+          <div class="item-city">
+            <div class="city">北京</div>
+          </div>
+          <div class="item-city">
+            <div class="city">北京</div>
+          </div>
+        </div>
+        
+        <!-- 字母城市 -->
+        <div class="item border">
+          <div class="item-title">A</div>
+          <div class="item-str">
+            <div class="str">阿尔法</div>
+            <div class="str">阿尔法</div>
+            <div class="str">阿尔法</div>
+            <div class="str">阿尔法</div>
+            <div class="str">阿尔法</div>
+            <div class="str">阿尔法</div>
+            <div class="str">阿尔法</div>
+            <div class="str">阿尔法</div>
+            <div class="str">阿尔法</div>
+            <div class="str">阿尔法</div>
+            <div class="str">阿尔法</div>
+            <div class="str">阿尔法</div>
+            <div class="str">阿尔法</div>
+            <div class="str">阿尔法</div>
+            <div class="str">阿尔法</div>
+            <div class="str">阿尔法</div>
+            <div class="str">阿尔法</div>
+            <div class="str">阿尔法</div>
+            <div class="str">阿尔法</div>
+            <div class="str">阿尔法</div>
+            <div class="str">阿尔法</div>
+            <div class="str">阿尔法</div>
+            <div class="str">阿尔法</div>
+            <div class="str">阿尔法</div>
+          </div>
+      
+        </div>
       </div>
-    </div>
-    <!-- 热门城市 -->
-    <div class="item border">
-      <div class="item-title">热门城市</div>
-      <div class="item-city">
-        <div class="city">北京</div>
-      </div>
-      <div class="item-city">
-        <div class="city">北京</div>
-      </div>
-      <div class="item-city">
-        <div class="city">北京</div>
-      </div>
-      <div class="item-city">
-        <div class="city">北京</div>
-      </div>
-      <div class="item-city">
-        <div class="city">北京</div>
-      </div>
-      <div class="item-city">
-        <div class="city">北京</div>
-      </div>
-
-       
-    
-    </div>
-    
-     <!-- 字母城市 -->
-    <div class="item border">
-      <div class="item-title">A</div>
-      <div class="item-str">
-        <div class="str">阿尔法</div>
-        <div class="str">阿尔法</div>
-        <div class="str">阿尔法</div>
-        <div class="str">阿尔法</div>
-        <div class="str">阿尔法</div>
-        <div class="str">阿尔法</div>
-        <div class="str">阿尔法</div>
-        <div class="str">阿尔法</div>
-        <div class="str">阿尔法</div>
-        <div class="str">阿尔法</div>
-        <div class="str">阿尔法</div>
-        <div class="str">阿尔法</div>
-      </div>
-    
-    </div>
     
 
   </div>
 </template>
 
 <script>
+import BScroll from 'better-scroll'
 export default {
-  name:'CityList'
+  name:'CityList',
+  mounted(){
+    console.log(this.$refs.wrapper)
+    this.scroll = new BScroll(this.$refs.wrapper)
+  }
 };
 </script>
 
@@ -70,7 +85,7 @@ export default {
 .list
   overflow hidden
   position absolute
-  top:0.84rem
+  top:1.68rem
   left 0
   right 0
   bottom 0
