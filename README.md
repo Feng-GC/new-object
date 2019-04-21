@@ -2,8 +2,10 @@
 
 > 从零开始的学习项目
 # 插件
-> 轮播：vue-awesome-swiper
-> 滑动：better-scroll
+``` bash
+# 轮播：vue-awesome-swiper
+# 滑动：better-scroll
+```
 
 ## Build Setup
 
