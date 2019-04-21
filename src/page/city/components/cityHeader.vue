@@ -2,17 +2,19 @@
 <template>
  <div>
     <div class="head">
-      <div class="head-black iconfont">&#xe624;</div>
+      <router-link to="/">
+        <div class="head-black iconfont">&#xe624;</div>
+      </router-link>
       <div class="head-desc">城市选择</div>
     </div>
-
  </div>
  
 </template>
 
 <script>
 export default {
-  name:'CityHeader'
+  name:'CityHeader',
+  
 }
 </script>
 
@@ -29,6 +31,8 @@ export default {
       width: 0.64rem
       float left
       text-align center
+      color #eee
+      font-size: 0.4rem
     .head-desc
       text-align center
       padding 0 0.64rem

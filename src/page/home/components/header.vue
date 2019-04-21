@@ -9,9 +9,12 @@
     </div>
     <router-link to="/city">
       <div class="header-right">
-        default
+        <div class="cityname">
+            {{this.$store.state.city}}
+        </div>
         <span class="iconfont downicon">&#xe62d;</span>
       </div>
+      
     </router-link>  
   </div>
 </template>
@@ -53,9 +56,16 @@ export default {
   }
 
   .header-right {
-    width: 1.24rem;
+    min-width: 1.24rem;
+    padding: 0.1rem
     float: right;
     text-align: center;
+    color: #eee;
+    .cityname {
+      display inline-block
+    }
+      
   }
+  
 }
 </style>

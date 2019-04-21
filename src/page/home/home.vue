@@ -16,6 +16,7 @@ import HomeRecommend from "./components/recommend";
 import HomeGowhere from "./components/gowhere";
 import axios from "axios";
 
+
 export default {
   name: "Home",
   data() {
